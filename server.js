@@ -11,7 +11,6 @@ const cardUrl =
 app.get("/", async function (req, res) {
   try {
     const cardsIds = await getCardsIds(cardUrl);
-    console.log(cardsIds);
     const stock = await getStockData({ cardsIds, storeId });
 
     res.send(stock);
